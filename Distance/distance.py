@@ -44,9 +44,7 @@ while True:
             bottom_right = corners[2].ravel()
             bottom_left = corners[3].ravel()
 
-            # Since there was mistake in calculating the distance approach point-outed in the Video Tutorial's comment
-            # so I have rectified that mistake, I have test that out it increase the accuracy overall.
-            # Calculating the distance
+            
             distance = np.sqrt(
                 tVec[i][0][2] ** 2 + tVec[i][0][0] ** 2 + tVec[i][0][1] ** 2
             )
@@ -72,7 +70,7 @@ while True:
                 2,
                 cv.LINE_AA,
             )
-            # print(ids, "  ", corners)
+            
     cv.imshow("frame", frame)
     key = cv.waitKey(1)
     if key == ord("q"):
